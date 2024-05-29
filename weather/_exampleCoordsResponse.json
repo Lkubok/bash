@@ -1,0 +1,24 @@
+[
+  {
+    "name": "Bielsko-Biała",
+    "local_names": {
+      "lt": "Belsko-Biala",
+      "de": "Bielitz-Biala",
+      "uk": "Бельсько-Бяла",
+      "fa": "بیلسکو بیاوا",
+      "cs": "Bílsko-Bělá",
+      "he": "ביילסקו-ביאלה",
+      "ja": "ビェルスコ＝ビャワ",
+      "ru": "Бельско-Бяла",
+      "mk": "Бјелско-Бјала",
+      "pl": "Bielsko-Biała",
+      "zh": "别尔斯科-比亚瓦",
+      "bg": "Белско-Бяла",
+      "be": "Бельска-Бяла"
+    },
+    "lat": 49.822118,
+    "lon": 19.0448936,
+    "country": "PL",
+    "state": "Silesian Voivodeship"
+  }
+]

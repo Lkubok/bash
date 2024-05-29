@@ -1,0 +1,44 @@
+{
+  "coord": {
+    "lon": 49.8221,
+    "lat": 49.8221
+  },
+  "weather": [
+    {
+      "id": 800,
+      "main": "Clear",
+      "description": "clear sky",
+      "icon": "01d"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 300.59,
+    "feels_like": 299.57,
+    "temp_min": 300.59,
+    "temp_max": 300.59,
+    "pressure": 1020,
+    "humidity": 22,
+    "sea_level": 1020,
+    "grnd_level": 1019
+  },
+  "visibility": 10000,
+  "wind": {
+    "speed": 1.88,
+    "deg": 210,
+    "gust": 2.87
+  },
+  "clouds": {
+    "all": 0
+  },
+  "dt": 1716976191,
+  "sys": {
+    "country": "KZ",
+    "sunrise": 1716943185,
+    "sunset": 1717000613
+  },
+  "timezone": 18000,
+  "id": 610655,
+  "name": "Alimbek",
+  "cod": 200
+}

@@ -8,25 +8,30 @@ write_directory="bulk_images"
 declare -i image_counter=1
 declare -i fail_counter=0
 declare -i success_counter=0
+declare -r image_fetch_limit=100
+declare -r image_fetch_error_limit=10
 
 text_bold=$(tput bold)
 text_error=$(tput setaf 1)
 text_success=$(tput setaf 2)
+text_info=$(tput setaf 6)
 text_reset=$(tput sgr0)
 
-echo -e "Downloading bulk images for thumbnails.. \n "
+echo -e "${text_info}Downloading bulk images for thumbnails.. \n ${text_reset}"
 echo ""
 echo "Checking if folder to write exists.."
 
 # Checking for writeable directory
-if [ -d "${write_directory}" ]; then
-    echo "${write_directory} does exist."
+if [ -d "${script_directory}/${write_directory}" ]; then
+    echo "${text_info}${write_directory}${text_reset} does exist"
+    echo ""
 else
-    echo "Wire directory does not exist. Creating ${text_bold}${text_success}${write_directory}${text_reset}"
+    echo "Write directory does not exist. Creating ${text_bold}${text_success}${write_directory}${text_reset}"
     mkdir "${script_directory}/${write_directory}"
+    echo ""
 fi
 
-while ((image_counter <= 4)); do
+while ((image_counter <= image_fetch_limit)); do
     echo -n "Downloading ${image_counter} image..  "
     curl "${images_url}image-${image_counter}.jpg" -o "${script_directory}/${write_directory}/image-${image_counter}.jpg" -f -s
 
@@ -43,8 +48,9 @@ while ((image_counter <= 4)); do
     ((image_counter = image_counter + 1))
 
     # Exit after 10 failed attempts
-    if ((fail_counter >= 10)); then
-        echo "More that ${fail_counter} images failed to download, aborting fetching of images"
+    if ((fail_counter >= image_fetch_error_limit)); then
+        echo "${text_error}More than ${text_bold}${fail_counter}${text_reset}${text_error} images failed to download, aborting fetching of images${text_reset}" >&2
         break
+        exit 1
     fi
 done

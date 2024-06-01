@@ -1,0 +1,75 @@
+2024-06-01 / Created orders-2024-06-01.sql.tar.bz2
+2024-06-01 / Created customers_data-2024-06-01.tar.bz2
+2024-06-01 / Created inventory_data-2024-06-01.tar.bz2
+2024-06-01 / Created orders-2024-06-01.sql.tar.bz2
+2024-06-01 / Created orders-2024-06-01.sql.tar.bz2
+2024-06-01 / Created orders-2024-06-01.sql.tar.bz2
+2024-06-01 / Created customers_data-2024-06-01.tar.bz2
+2024-06-01 / Created inventory_data-2024-06-01.tar.bz2
+2024-06-01 / Created orders-2024-06-01.sql.tar.bz2
+2024-06-01 / Created orders-2024-06-01.sql.tar.bz2
+2024-06-01 / Created orders-2024-06-01.sql.tar.bz2
+2024-06-01 / Created orders-2024-06-01.sql.tar.bz2
+2024-06-01 / Created orders-2024-06-01.sql.tar.bz2
+2024-06-01 / Created orders-2024-06-01.sql.tar.bz2
+2024-06-01 / Created customers_data-2024-06-01.tar.bz2
+2024-06-01 / Created inventory_data-2024-06-01.tar.bz2
+2024-06-01 / Created orders-2024-06-01.sql.tar.bz2
+2024-06-01 / Created customers_data-2024-06-01.tar.bz2
+2024-06-01 / Created inventory_data-2024-06-01.tar.bz2
+2024-06-01 / Created orders-2024-06-01.sql.tar.bz2
+2024-06-01 / Created customers_data-2024-06-01.tar.bz2
+2024-06-01 / Created inventory_data-2024-06-01.tar.bz2
+2024-06-01 / Created orders-2024-06-01.sql.tar.bz2
+2024-06-01 / Error occured during creation of customers_data-2024-06-01.tar.bz2
+2024-06-01 / Created orders-2024-06-01.sql.tar.bz2
+2024-06-01 / Error occured during creation of customers_data-2024-06-01.tar.bz2
+2024-06-01 / Created orders-2024-06-01.sql.tar.bz2
+2024-06-01 / Error occured during creation of customers_data-2024-06-01.tar.bz2
+2024-06-01 / Created orders-2024-06-01.sql.tar.bz2
+2024-06-01 / Error occured during creation of customers_data-2024-06-01.tar.bz2
+2024-06-01 / Error occured during creation of inventory_data-2024-06-01.tar.bz2
+2024-06-01 / Created orders-2024-06-01.sql.tar.bz2
+2024-06-01 / Error occured during creation of customers_data-2024-06-01.tar.bz2
+2024-06-01 / Error occured during creation of inventory_data-2024-06-01.tar.bz2
+2024-06-01 / Created orders-2024-06-01.sql.tar.bz2
+tar (child): ./backups2/customers_data-2024-06-01.tar.bz2: Cannot open: No such file or directory
+tar (child): Error is not recoverable: exiting now
+tar: ./backups2/customers_data-2024-06-01.tar.bz2: Cannot write: Broken pipe
+tar: Child returned status 2
+tar: Error is not recoverable: exiting now
+2024-06-01 / Created customers_data-2024-06-01.tar.bz2
+tar (child): ./backups2/inventory_data-2024-06-01.tar.bz2: Cannot open: No such file or directory
+tar (child): Error is not recoverable: exiting now
+tar: Child returned status 2
+tar: Error is not recoverable: exiting now
+
+2024-06-01 / Created orders-2024-06-01.sql.tar.bz2 
+2024-06-01 / Created customers_data-2024-06-01.tar.bz2 
+2024-06-01 / Created inventory_data-2024-06-01.tar.bz2 
+2024-06-01 / Created orders-2024-06-01.sql.tar.bz2 
+2024-06-01 / Created customers_data-2024-06-01.tar.bz2 
+2024-06-01 / Created inventory_data-2024-06-01.tar.bz2 
+2024-06-01 / Created orders-2024-06-01.sql.tar.bz2 
+2024-06-01 / Created customers_data-2024-06-01.tar.bz2 
+2024-06-01 / Created inventory_data-2024-06-01.tar.bz2 
+2024-06-01 / Error occured during creation of orders-2024-06-01.sql.tar.bz2
+2024-06-01 / Error occured during creation of customers_data-2024-06-01.tar.bz2
+2024-06-01 / Error occured during creation of inventory_data-2024-06-01.tar.bz2
+2024-06-01 / Error occured during creation of orders-2024-06-01.sql.tar.bz2
+2024-06-01 / Created customers_data-2024-06-01.tar.bz2 
+2024-06-01 / Created inventory_data-2024-06-01.tar.bz2 
+2024-06-01 / Creating DB dump failed
+2024-06-01 / Created orders-2024-06-01.sql.tar.bz2 
+2024-06-01 / Created customers_data-2024-06-01.tar.bz2 
+2024-06-01 / Created inventory_data-2024-06-01.tar.bz2 
+2024-06-01 / Creating DB dump failed
+2024-06-01 / Created orders-2024-06-01.sql.tar.bz2 
+2024-06-01 / Created customers_data-2024-06-01.tar.bz2 
+2024-06-01 / Created inventory_data-2024-06-01.tar.bz2 
+2024-06-01 / Compressing of the DB file failed
+2024-06-01 / Created customers_data-2024-06-01.tar.bz2 
+2024-06-01 / Created inventory_data-2024-06-01.tar.bz2 
+2024-06-01 / Created orders-2024-06-01.sql.tar.bz2 
+2024-06-01 / Created customers_data-2024-06-01.tar.bz2 
+2024-06-01 / Created inventory_data-2024-06-01.tar.bz2 

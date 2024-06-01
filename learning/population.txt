@@ -1,0 +1,4 @@
+Budapest; 1800000
+"New York"; 850000
+London; 9000000
+"Paris; France": 4500000

@@ -1,0 +1,9 @@
+{
+  "firstname": "Lucas",
+  "lastname": "Gulpin",
+  "age": 35,
+  "courses": [
+    { "title": "Bash cpourse", "url": "/bash-course" },
+    { "title": "Linux course", "url": "/linux-course" }
+  ]
+}

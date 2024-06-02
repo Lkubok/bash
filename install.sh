@@ -45,10 +45,7 @@ dialog_answer=$(dialog --keep-tite --no-tags --backtitle "${backtitle}" --checkl
 for scripts_folder in ${dialog_answer}; do
     cp ${working_dir}/${scripts_folder}*.sh "${install_dir}"
     echo "${text_bold}${text_success}$(cat ${working_dir}/${scripts_folder}info.txt)${text_reset} installed"
-    # readarray -t testing < <(echo ${working_dir}/${scripts_folder}*.sh)
     files_to_update+=($(echo ${working_dir}/${scripts_folder}*.sh))
-    # echo "Testing: " "${testing[@]}"
-    # echo "FILES TO REMOVE: " "${files_to_update[@]}"
 done
 
 # Remove old script versions

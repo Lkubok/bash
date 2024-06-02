@@ -15,6 +15,7 @@ text_reset=$(tput sgr0)
 backtitle="Custom Bash scripts installer ${version}"
 menu_select_commands_title="Select commands to install"
 dialog_select_params=
+declare -a files_to_update
 
 installable_folders=$(ls -d */ | grep "_i")
 
@@ -44,6 +45,16 @@ dialog_answer=$(dialog --keep-tite --no-tags --backtitle "${backtitle}" --checkl
 for scripts_folder in ${dialog_answer}; do
     cp ${working_dir}/${scripts_folder}*.sh "${install_dir}"
     echo "${text_bold}${text_success}$(cat ${working_dir}/${scripts_folder}info.txt)${text_reset} installed"
+    # readarray -t testing < <(echo ${working_dir}/${scripts_folder}*.sh)
+    files_to_update+=($(echo ${working_dir}/${scripts_folder}*.sh))
+    # echo "Testing: " "${testing[@]}"
+    # echo "FILES TO REMOVE: " "${files_to_update[@]}"
+done
+
+# Remove old script versions
+for script_to_remove in "${files_to_update[@]}"; do
+    to_remove=$(basename "${script_to_remove//.sh/''}")
+    rm "${install_dir}/${to_remove}"
 done
 
 # Cleanup after install
@@ -58,11 +69,9 @@ if [[ ! $PATH == *${install_dir}* ]]; then
     if [[ $SHELL == "/bin/bash" ]]; then
         echo "Adding ${text_info}${install_dir}${text_reset} to \$PATH"
         echo "export PATH=\""${install_dir}:'$PATH'\""" >>~/.bashrc
-        source "${HOME}/.bashrc"
     elif [[ $SHELL == "/bin/zsh" ]]; then
         echo "Adding ${text_info}${install_dir}${text_reset} to \$PATH"
         echo "export PATH=\""${install_dir}:'$PATH'\""" >>~/.zshrc
-        source "${HOME}/.zshrc"
     fi
 fi
 

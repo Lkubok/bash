@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+ver="0.1.0"
 
 working_dir=$(dirname -- "${BASH_SOURCE[0]}")
 install_dir="${HOME}/bin"
@@ -15,6 +16,12 @@ menu_select_commands_title="Select commands to install"
 dialog_select_params=
 
 installable_folders=$(ls -d */ | grep "_i")
+# declare -a new_scripts
+
+printf "\n"
+echo "${text_bold}${text_info}Custom scripts installer ${ver}: ${text_reset}"
+echo "--------------------------"
+printf "\n"
 
 for folder in ${installable_folders}; do
     pos_name=$(cat "${working_dir}/${folder}info.txt")
@@ -41,3 +48,15 @@ readarray -t files < <(ls $install_dir)
 for file in "${files[@]}"; do
     mv "${install_dir}/$file" "${install_dir}/${file//.sh/''}"
 done
+
+# $PATH check
+
+if [[ ! $PATH == *${install_dir}* ]]; then
+    if [[ $SHELL == "/bin/bash" ]]; then
+        echo "export PATH=\""${install_dir}:'$PATH'\""" >>~/.bashrc
+        source "${HOME}/.bashrc"
+    elif [[ $SHELL == "/bin.zsh" ]]; then
+        echo "export PATH=\""${install_dir}:'$PATH'\""" >>~/.zshrc
+        source "${HOME}/.zshrc"
+    fi
+fi

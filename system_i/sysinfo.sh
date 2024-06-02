@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# read -rsp "Enter root password: " pass
+read -t 10 -s -p "Enter root password: " pass
 
 text_bold="$(tput bold)"
 text_success="$(tput setaf 2)"
@@ -13,7 +13,8 @@ system_load=$(uptime)
 most_extensive_process="$(sed 1d < <(ps -ef --sort=-pcpu | head -2))"
 main_drive_usage="$(df -h | grep -w "/" | head -1)"
 memory_avilable="$(cat /proc/meminfo | grep MemAvailable)"
-ipaddr="$(ip addr show | grep -w inet | tr -s "\n" " " && echo)"
+# ipaddr="$(ip addr show | grep -w inet | tr -s "\n" " " && echo)"
+ipaddr=$(ip addr show | grep -o -E '(([0-9]{1,3})\.?){4}/[0-9]{2}' | tr "\n" " ")
 macaddr="$(ip addr show | grep -w "link" | tr -s "\n" " " && echo)"
 firewall_services="$(echo ${pass} | sudo -S firewall-cmd --list-all | grep services | cut -d ":" -f 2 | tr -d "\n" && echo)"
 firewall_ports="$(echo ${pass} | sudo -S firewall-cmd --list-all | grep ports | cut -d ":" -f 2 | tr -d "\n" && echo)"
@@ -29,7 +30,7 @@ echo "${text_blue}SSH Status:${text_reset}              ${text_bold}$(systemctl 
 echo "${text_blue}HTTPD Status:${text_reset}            ${text_bold}$(systemctl status apache2 | grep -F "Active: ")${text_reset}"
 echo "${text_blue}Firewall status:${text_reset}         ${text_bold}$(systemctl status firewalld | grep -F "Active: ")${text_reset}"
 echo "${text_blue}SAMBA Status:${text_reset}            ${text_bold}$(systemctl status smb | grep -F "Active: ")${text_reset}"
-echo "${text_blue}IP address:${text_reset}                  ${text_bold}${ipaddr}${text_reset}"
+echo "${text_blue}IP address:${text_reset}                   ${text_bold}${ipaddr}${text_reset}"
 echo "${text_blue}MAC address:${text_reset}                 ${text_bold}${macaddr}${text_reset}"
 echo "${text_blue}Firewall ports open:${text_reset}          ${text_bold}${firewall_ports}${text_reset}"
 echo "${text_blue}Firewall services open:${text_reset}      ${text_bold}${firewall_services}${text_reset}"

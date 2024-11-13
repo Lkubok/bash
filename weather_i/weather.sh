@@ -7,12 +7,16 @@ text_reset="$(tput sgr0)"
 wheater_api_url=https://api.openweathermap.org/data/2.5/weather
 coords_api_url=http://api.openweathermap.org/geo/1.0/direct
 
-echo -n "Provide city to check weather: "
-printf "\n"
-read -r city
-declare -r city
+if [ -z "$1" ]; then
+    echo -n "Provide city to check weather: "
+    printf "\n"
+    read -r city
+else
+    city="$1"
+fi
+declare -r CITY="${city}"
 
-coords_response="$(curl -s ${coords_api_url} -G --data-urlencode "q=${city}" -G --data-urlencode "appid=${WEATHER_API_KEY}" | jq)"
+coords_response="$(curl -s ${coords_api_url} -G --data-urlencode "q=${CITY}" -G --data-urlencode "appid=${WEATHER_API_KEY}" | jq)"
 
 # For debug only
 # coords_response='[{"lat": 49.822118,"lon": 19.0448936}]'
